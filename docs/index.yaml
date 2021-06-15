@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  demo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-06-15T19:37:08.592505+08:00"
+    description: A Helm chart for Kubernetes
+    digest: bfc45ad8981cfffc7b6856307c8e203751fec665ec933f89f932a3cb1fb536b8
+    name: demo
+    type: application
+    urls:
+    - https://weekndCN.github.com/charts/demo-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-06-15T19:37:08.591908+08:00"
