@@ -3,7 +3,7 @@ set -e
 
 HASH=$(git rev-parse HEAD)
 
-if [ -f "./traefik/Chart.yaml" ]; then
+if [ -f "./demo/Chart.yaml" ]; then
     VERSION=$(cat ./demo/Chart.yaml | grep "version:" | awk -F " " '{ print "v"$2 }')
 else
     VERSION=$(cat ./Chart.yaml | grep "version:" | awk -F " " '{ print "v"$2 }')
