@@ -1,0 +1,26 @@
+name: Chart Releaser
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  tag:
+    name: Automatic Chart Releaser
+    runs-on: ubuntu-latest
+    if: github.repository == 'weekndCN/charts'
+
+    steps:
+
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Run
+        run: |
+          ./.github/helm-chart-tagger.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
