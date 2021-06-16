@@ -21,6 +21,6 @@ jobs:
 
       - name: Run
         run: |
-          ./.github/helm-chart-tagger.sh
+          ./.github/autocr.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
